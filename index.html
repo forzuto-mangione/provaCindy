@@ -22,10 +22,10 @@
     </style>
     <link rel="stylesheet" href="CindyJS.css">
     <script type="text/javascript" src="Cindy.js"></script>
-    <script type="text/javascript">
+   <script type="text/javascript">
 var cdy = CindyJS({
   scripts: "cs*",
-  allowtouches: true,
+  allowtouches: true,   // ✅ Abilita il multitouch
   defaultAppearance: {
     dimDependent: 0.7,
     fontFamily: "sans-serif",
@@ -52,7 +52,25 @@ var cdy = CindyJS({
   csconsole: false,
   cinderella: {build: 2090, version: [3, 0, 2090]}
 });
-    </script>
+
+// ✅ Eventi Touch Manuali
+const canvas = document.getElementById("CSCanvas");
+
+canvas.addEventListener("touchstart", function(event) {
+    event.preventDefault();
+    console.log("Touch start", event.touches.length);
+});
+
+canvas.addEventListener("touchmove", function(event) {
+    event.preventDefault();
+    console.log("Touch move", event.touches.length);
+});
+
+canvas.addEventListener("touchend", function(event) {
+    event.preventDefault();
+    console.log("Touch end");
+});
+</script>
 </head>
 <body>
     <canvas id="CSCanvas"></canvas>   <!-- ✅ Cambiato da div a canvas -->
