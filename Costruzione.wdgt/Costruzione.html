@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Costruzione.cdy</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #CSConsole {
+            background-color: #FAFAFA;
+            border-top: 1px solid #333333;
+            bottom: 0px;
+            height: 200px;
+            overflow-y: scroll;
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="CindyJS.css">
+    <script type="text/javascript" src="Cindy.js"></script>
+    <script type="text/javascript">
+var cdy = CindyJS({
+  scripts: "cs*",
+  defaultAppearance: {
+    dimDependent: 0.7,
+    fontFamily: "sans-serif",
+    lineSize: 1,
+    pointSize: 5.0,
+    textsize: 12.0
+    touch: true
+  },
+  angleUnit: "°",
+  geometry: [
+    {name: "A", type: "Free", pos: [2.318181818181818, -4.0, 0.3787878787878788], color: [1.0, 0.0, 0.0], labeled: true},
+    {name: "B", type: "Free", pos: [4.0, -1.380710659898477, 0.1692047377326565], color: [1.0, 0.0, 0.0], labeled: true},
+    {name: "a", type: "Join", color: [0.0, 0.0, 1.0], args: ["A", "B"], labeled: true},
+    {name: "C", type: "Free", pos: [4.0, -0.7093023255813954, 0.29069767441860467], color: [1.0, 0.0, 0.0], labeled: true},
+    {name: "D", type: "Free", pos: [4.0, -3.7766497461928936, 0.25380710659898476], color: [1.0, 0.0, 0.0], labeled: true},
+    {name: "b", type: "Join", color: [0.0, 0.0, 1.0], args: ["C", "D"], labeled: true}
+  ],
+  ports: [{
+    width: 1281,
+    height: 576,
+    id: "CSCanvas",
+    transform: [{visibleRect: [-30.856012380000024, 17.507034420000007, 59.918773260000016, -23.309731020000008]}],
+    background: "rgb(168,176,192)"
+  }],
+  csconsole: false,
+  cinderella: {build: 2090, version: [3, 0, 2090]}
+});
+    </script>
+</head>
+<body>
+    <div id="CSCanvas"></div>
+</body>
+</html>
