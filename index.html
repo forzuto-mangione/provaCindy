@@ -25,13 +25,13 @@
     <script type="text/javascript">
 var cdy = CindyJS({
   scripts: "cs*",
+  touch: true
   defaultAppearance: {
     dimDependent: 0.7,
     fontFamily: "sans-serif",
     lineSize: 1,
     pointSize: 5.0,
     textsize: 12.0
-    touch: true
   },
   angleUnit: "°",
   geometry: [
@@ -55,6 +55,6 @@ var cdy = CindyJS({
     </script>
 </head>
 <body>
-    <div id="CSCanvas"></div>
+    <canvas id="CSCanvas"></canvas>   <!-- ✅ Cambiato da div a canvas -->
 </body>
 </html>
